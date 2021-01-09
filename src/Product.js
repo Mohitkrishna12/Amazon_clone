@@ -4,20 +4,24 @@ import {useStateValue} from "./StateProvider"
 
 function Product({id,title,image,price,rating}) {
 	const [{cart},dispatch] =useStateValue();
-
+	console.log({cart});
 
 	const addToCart =() =>{
 
 		dispatch({
 			type:"ADD_TO_CART",
-			id:id,
-			title:title,
-			image:image,
-			price:price,
-			rating:rating,
+			item:{
+				id:id,
+				title:title,
+				image:image,
+				price:price,
+				rating:rating
+			}
+			
 
 		})
 	}
+
 
 
 
