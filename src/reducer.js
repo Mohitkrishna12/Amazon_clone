@@ -1,5 +1,6 @@
 export const initialState={
 	cart:[],
+	user:null
 };
 export const getCartTotal = (cart) => cart?.reduce((amount,item) =>item.price+amount,0);
 
@@ -10,6 +11,11 @@ const reducer =(state,action) =>{
 				...state,
 				cart:[...state.cart,action.item],
 			};
+			case "SET_USER":
+				return {
+					...state,
+					user:action.user
+				};
 			case "REMOVE_FROM_CART":
 				const index=state.cart.findIndex(
 					(cartItem)=>cartItem.id===action.id);
