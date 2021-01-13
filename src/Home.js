@@ -28,7 +28,7 @@ function Home() {
 					<Product id="123"
 							 title="OnePlus Nord 5G (Gray Ash, 12GB RAM, 256GB Storage)" 
 							 image="https://images-na.ssl-images-amazon.com/images/I/71-8y4L6jKL._SL1500_.jpg"
-							 price={"29,999.00"}
+							 price={"16,999.00"}
 							 rating={5}
 							 />
 					
